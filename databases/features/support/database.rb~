@@ -1,0 +1,11 @@
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :transaction
+
+Before do
+	DatabaseCleaner.start
+end
+
+After do
+	DatabaseCleaner.clean
+end
