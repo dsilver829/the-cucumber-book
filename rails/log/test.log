@@ -1,0 +1,149 @@
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (29.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:35:46 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:35:46 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:37:21 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:37:21 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:38:12 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:38:12 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.9ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:39:16 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:16 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:53:59 -0400
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:57:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:58:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 11:01:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (138.9ms)
+Completed 200 OK in 218ms (Views: 216.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (49.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 11:03:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 215ms (Views: 213.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
