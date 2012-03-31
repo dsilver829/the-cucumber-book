@@ -1,0 +1,431 @@
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (29.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:35:46 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:35:46 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:37:21 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:37:21 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:38:12 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:38:12 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.9ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:39:16 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:16 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:39:54 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["updated_at", Thu, 29 Mar 2012 14:41:20 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:53:59 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:53:59 -0400
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:57:16 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:57:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 14:58:22 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 10:58:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.0ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:01:31 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 11:01:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (138.9ms)
+Completed 200 OK in 218ms (Views: 216.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (49.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "this is my message"], ["created_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["updated_at", Fri, 30 Mar 2012 15:03:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-03-30 11:03:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = 1[0m
+  Rendered users/show.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 215ms (Views: 213.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (67.9ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:28:29 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:28:29 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (50.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:29:16 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:29:16 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:30:30 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:30:30 -0400
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:32:33 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:32:33 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 137ms (Views: 136.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:34:46 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:34:46 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 94ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:34:47 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (47.9ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:42:23 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:42:23 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:42:24 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:43:14 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:43:14 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:43:15 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (51.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:06 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:44:06 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 95ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:44:07 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:44:57 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:44:57 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 95ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:44:57 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (47.8ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:23 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:46:23 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (91.1ms)
+Completed 500 Internal Server Error in 170ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:46:46 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:46:47 -0400
+Processing by SearchController#show as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.8ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:47:52 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:47:52 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:47:53 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered search/show.html.erb within layouts/application (264.6ms)
+Completed 500 Internal Server Error in 265ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (47.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["updated_at", Sat, 31 Mar 2012 13:50:47 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-03-31 09:50:47 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 97ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-03-31 09:50:47 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (132.5ms)
+Completed 200 OK in 134ms (Views: 133.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
