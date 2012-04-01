@@ -429,3 +429,337 @@ Processing by SearchController#show as HTML
   Rendered search/show.html.erb within layouts/application (132.5ms)
 Completed 200 OK in 134ms (Views: 133.5ms | ActiveRecord: 0.3ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (43.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (95.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["user_id", 1]]
+  [1m[35m (76.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["user_id", 1]]
+  [1m[36m (69.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:28:49 UTC +00:00], ["user_id", 1]]
+  [1m[35m (64.9ms)[0m  commit transaction
+  [1m[36m (69.6ms)[0m  [1mDELETE FROM "messages";[0m
+  [1m[35m (82.9ms)[0m  DELETE FROM sqlite_sequence where name = 'messages';
+  [1m[36m (65.8ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (57.8ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:12 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 15:49:12 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 174ms (Views: 173.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 15:49:13 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (169.0ms)
+Completed 200 OK in 171ms (Views: 170.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (84.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["user_id", 1]]
+  [1m[36m (68.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["user_id", 1]]
+  [1m[35m (62.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 19:49:13 UTC +00:00], ["user_id", 1]]
+  [1m[36m (62.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 15:49:22 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-04-01 15:49:22 -0400
+Compiled application.css  (1ms)  (pid 3844)
+Served asset /application.css - 200 OK (67ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-04-01 15:49:22 -0400
+Compiled jquery.js  (5ms)  (pid 3844)
+Compiled jquery_ujs.js  (0ms)  (pid 3844)
+Compiled application.js  (53ms)  (pid 3844)
+Served asset /application.js - 200 OK (85ms)
+  [1m[35m (99.7ms)[0m  DELETE FROM "messages";
+  [1m[36m (110.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'messages';[0m
+  [1m[35m (80.1ms)[0m  DELETE FROM "users";
+  [1m[36m (66.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.0ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:09 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:11:09 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 95ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:11:10 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (129.2ms)
+Completed 200 OK in 131ms (Views: 130.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (94.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["user_id", 1]]
+  [1m[36m (67.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["user_id", 1]]
+  [1m[35m (62.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:11:10 UTC +00:00], ["user_id", 1]]
+  [1m[36m (62.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:11:17 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-04-01 16:11:17 -0400
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-04-01 16:11:17 -0400
+Compiled search.js  (0ms)  (pid 4183)
+Compiled application.js  (6ms)  (pid 4183)
+Served asset /application.js - 200 OK (59ms)
+  [1m[35m (86.0ms)[0m  DELETE FROM "messages";
+  [1m[36m (65.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'messages';[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM "users";
+  [1m[36m (73.9ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:43 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:13:44 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:13:44 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (130.6ms)
+Completed 200 OK in 132ms (Views: 131.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (84.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["user_id", 1]]
+  [1m[36m (59.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (62.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:13:44 UTC +00:00], ["user_id", 1]]
+  [1m[36m (62.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:13:51 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-04-01 16:13:51 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-04-01 16:13:51 -0400
+Served asset /application.js - 200 OK (15ms)
+  [1m[35m (81.2ms)[0m  DELETE FROM "messages";
+  [1m[36m (65.6ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'messages';[0m
+  [1m[35m (65.9ms)[0m  DELETE FROM "users";
+  [1m[36m (66.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (17.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:20:42 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 105ms (Views: 104.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:20:42 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (131.2ms)
+Completed 200 OK in 133ms (Views: 132.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:42 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (141.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["user_id", 1]]
+  [1m[36m (59.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["user_id", 1]]
+  [1m[35m (70.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:20:43 UTC +00:00], ["user_id", 1]]
+  [1m[36m (62.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:20:49 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-04-01 16:20:49 -0400
+Compiled application.css  (2ms)  (pid 4391)
+Served asset /application.css - 200 OK (21ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-04-01 16:20:49 -0400
+Compiled jquery.js  (2ms)  (pid 4391)
+Compiled jquery_ujs.js  (0ms)  (pid 4391)
+Compiled search.js  (0ms)  (pid 4391)
+Compiled application.js  (62ms)  (pid 4391)
+Served asset /application.js - 200 OK (72ms)
+  [1m[35m (71.6ms)[0m  DELETE FROM "messages";
+  [1m[36m (65.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'messages';[0m
+  [1m[35m (90.8ms)[0m  DELETE FROM "users";
+  [1m[36m (82.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (16.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:02 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:21:02 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:21:03 -0400
+Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered search/show.html.erb within layouts/application (133.6ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["username", "testuser"]]
+  [1m[35m (139.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am making dinner"], ["created_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (68.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I just woke up"], ["created_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["user_id", 1]]
+  [1m[35m (70.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I am going to work"], ["created_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["updated_at", Sun, 01 Apr 2012 20:21:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (65.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:21:10 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-04-01 16:21:10 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-04-01 16:21:10 -0400
+Served asset /application.js - 200 OK (13ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:21:10 -0400
+Processing by SearchController#show as JSON
+  Parameters: {"query"=>"I am", "search"=>{"query"=>"I am", "action"=>"show", "controller"=>"search"}}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')
+Completed 200 OK in 105ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (85.3ms)[0m  [1mDELETE FROM "messages";[0m
+  [1m[35m (74.3ms)[0m  DELETE FROM sqlite_sequence where name = 'messages';
+  [1m[36m (65.8ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';

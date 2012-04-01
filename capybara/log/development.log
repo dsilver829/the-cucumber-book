@@ -51,3 +51,55 @@ Migrating to CreateMessages (20120329143841)
   [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (64.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120329143841')[0m
   [1m[35m (66.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120329143510')
+
+
+Started GET "/search" for 127.0.0.1 at 2012-04-01 16:16:30 -0400
+Processing by SearchController#show as HTML
+  Rendered search/show.html.erb within layouts/application (38.7ms)
+Compiled application.css  (0ms)  (pid 4350)
+Compiled jquery.js  (1ms)  (pid 4350)
+Compiled jquery_ujs.js  (0ms)  (pid 4350)
+Compiled search.js  (0ms)  (pid 4350)
+Compiled application.js  (10ms)  (pid 4350)
+Completed 200 OK in 126ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-01 16:16:31 -0400
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-01 16:16:31 -0400
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-01 16:16:31 -0400
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/search.js?body=1" for 127.0.0.1 at 2012-04-01 16:16:31 -0400
+Served asset /search.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-01 16:16:31 -0400
+Served asset /application.js - 200 OK (11ms)
+
+
+Started GET "/search?query=I" for 127.0.0.1 at 2012-04-01 16:16:36 -0400
+Processing by SearchController#show as JSON
+  Parameters: {"query"=>"I", "search"=>{"query"=>"I", "action"=>"show", "controller"=>"search"}}
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LIKE '%I%')[0m
+Completed 200 OK in 170ms (Views: 8.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/search?query=I+" for 127.0.0.1 at 2012-04-01 16:16:36 -0400
+Processing by SearchController#show as JSON
+  Parameters: {"query"=>"I ", "search"=>{"query"=>"I ", "action"=>"show", "controller"=>"search"}}
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE (content LIKE '%I %')
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2012-04-01 16:16:36 -0400
+Processing by SearchController#show as JSON
+  Parameters: {"query"=>"I am", "search"=>{"query"=>"I am", "action"=>"show", "controller"=>"search"}}
+  [1m[36mMessage Load (0.4ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')[0m
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
