@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
-input = File.read(ARGV[0])
+input = if ARGV.any?
+          File.read(ARGV[0])
+        else
+          puts "Please enter the calculation you'd like me to perform"
+          gets
+        end
+
 numbers_to_add = input.split('+').map{ |n| n.to_i }
 
 total = 0
